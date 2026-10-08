@@ -1,0 +1,103 @@
+.tf-cont {
+  padding-inline: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background-color: var(--color-base);
+  border: 1px solid var(--color-border);
+}
+.tf-header {
+  background-color: transparent;
+  align-self: flex-start;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 3rem;
+  padding: 0.375rem 0.25rem;
+  border-block-end: 1px solid var(--color-border);
+}
+
+.tf-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-height: 0;
+  min-width: 0;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  scrollbar-color: var(--color-text-muted) transparent;
+}
+.tf-footer {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.75rem 1rem;
+  height: 3.25rem;
+  border-top: 1px solid var(--color-muted);
+}
+
+.tf-row {
+  display: flex;
+  flex-direction: row;
+}
+.tf-row > *:nth-child(1) {
+  border-left-color: var(--color-contrast);
+  border-bottom-color: var(--color-contrast);
+  border-left-style: solid;
+  border-left-width: 3px;
+}
+
+.tf-row > *:nth-last-child(1) {
+  border-right-color: var(--color-contrast);
+  border-right-style: solid;
+  border-right-width: 3px;
+}
+.tf-headtitle {
+  flex: 0 0 auto;
+  position: sticky;
+  top: 0;
+  border-color: var(--color-contrast);
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-block-style: solid;
+  border-block-width: 2px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.25rem;
+  font-size: var(--text-lg);
+  background-color: var(--color-muted);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-wide);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.tf-cell {
+  flex: 0 0 auto;
+  display: flex;
+  border-right-width: 1px;
+  padding-inline: 0.5rem;
+  padding-block: 2px;
+  vertical-align: middle;
+  white-space: pre-line;
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-normal);
+  border-color: var(--color-muted);
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  font-weight: 400;
+}
+.tf-input {
+  background-color: transparent;
+  padding-block: 0;
+  outline-style: outset;
+  outline-width: 0px;
+}

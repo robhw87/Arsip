@@ -1,0 +1,33 @@
+.switch-wrapper {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-muted);
+  padding: 0.25rem 0.5rem;
+  border-style: 2px solid var(--color-border);
+  gap: 0.25rem;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+}
+
+.switch {
+  flex: 0 0 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  padding: 0.125rem 1.5rem;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.switch:hover {
+  background-color: var(--color-invert);
+  color: var(--color-text-rev);
+}
+
+.switch-active {
+  background-color: var(--color-invert);
+  color: var(--color-text-rev);
+}

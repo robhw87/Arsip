@@ -1,0 +1,127 @@
+.border-fail {
+  color: var(--color-fail);
+}
+.border-warn {
+  color: var(--color-warn);
+}
+.border-success {
+  color: var(--color-success);
+}
+.border-muted {
+  color: var(--color-muted);
+}
+.border-subtle {
+  color: var(--color-subtle);
+}
+.border-invert {
+  color: var(--color-invert);
+}
+.border-contrast {
+  color: var(--color-contrast);
+}
+.border-reverse {
+  color: var(--color-text-rev);
+}
+
+.border-collapse {
+  border-collapse: collapse;
+}
+.rounded-none {
+  border-radius: 0;
+}
+.rounded-sm {
+  border-radius: var(--radius-sm);
+}
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+.rounded-xl {
+  border-radius: var(--radius-xl);
+}
+.rounded-full {
+  border-radius: var(--radius-full);
+}
+.border-none {
+  border: none;
+}
+
+.border {
+  border-style: solid;
+  border-width: 1px;
+}
+.border-2 {
+  border-style: solid;
+  border-width: 2px;
+}
+.border-y {
+  border-block-style: solid;
+  border-block-width: 1px;
+}
+.border-y-2 {
+  border-block-style: solid;
+  border-block-width: 2px;
+}
+.border-y-3 {
+  border-block-style: solid;
+  border-block-width: 3px;
+}
+.border-x {
+  border-inline-style: solid;
+  border-inline-width: 1px;
+}
+.border-x-2 {
+  border-inline-style: solid;
+  border-inline-width: 2px;
+}
+.border-x-3 {
+  border-inline-style: solid;
+  border-inline-width: 3px;
+}
+.border-t {
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+.border-t-2 {
+  border-top-style: solid;
+  border-top-width: 2px;
+}
+.border-t-3 {
+  border-top-style: solid;
+  border-top-width: 3px;
+}
+.border-b {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.border-b-2 {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
+.border-b-3 {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+}
+.border-l {
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+.border-l-2 {
+  border-left-style: solid;
+  border-left-width: 2px;
+}
+.border-l-3 {
+  border-left-style: solid;
+  border-left-width: 3px;
+}
+.border-r {
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+.border-r-2 {
+  border-right-style: solid;
+  border-right-width: 2px;
+}
+.border-r-3 {
+  border-right-style: solid;
+  border-right-width: 3px;
+}

@@ -1,0 +1,27 @@
+.std-button {
+  border: solid 1px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-border);
+  color: var(--color-text);
+  text-transform: capitalize;
+  padding-inline: 0.75rem;
+  padding-block: 0.25rem;
+  min-width: 4rem;
+  cursor: pointer;
+}
+.std-button:hover {
+  background-color: var(--color-invert);
+}
+.icon-base {
+  display: inline-block;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+  width: calc(var(--spacing) * 8);
+  height: calc(var(--spacing) * 8);
+  z-index: 10;
+  background-color: var(--color-invert);
+}

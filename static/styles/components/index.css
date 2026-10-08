@@ -1,0 +1,43 @@
+@import url("/static/styles/components/button.css") layer(components);
+@import url("/static/styles/components/data-layout.css") layer(components);
+@import url("/static/styles/components/icon-comp.css") layer(components);
+@import url("/static/styles/components/input.css") layer(components);
+@import url("/static/styles/components/load.css") layer(components);
+@import url("/static/styles/components/switch.css") layer(components);
+@import url("/static/styles/components/searchbar.css") layer(components);
+@import url("/static/styles/components/sortbar.css") layer(components);
+@import url("/static/styles/components/switch.css") layer(components);
+@import url("/static/styles/components/tableform.css") layer(components);
+
+@layer components {
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    letter-spacing: var(--tracking-wide);
+  }
+  .text-md {
+    font-size: var(--text-md);
+    line-height: var(--leading-normal);
+    letter-spacing: var(--tracking-normal);
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--leading-snug);
+    letter-spacing: var(--tracking-tight);
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--leading-snug);
+    letter-spacing: var(--tracking-tight);
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tighter);
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tighter);
+  }
+}

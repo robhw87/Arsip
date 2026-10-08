@@ -1,0 +1,8 @@
+@layer reset, themes, base, components, utilities;
+
+@import url("/static/styles/font.css");
+@import url("/static/styles/reset.css") layer(reset);
+@import url("/static/styles/themes.css") layer(themes);
+@import url("/static/styles/base.css") layer(base);
+@import url("/static/styles/components/index.css") layer(components);
+@import url("/static/styles/utilities/index.css") layer(utilities);

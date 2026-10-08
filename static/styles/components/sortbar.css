@@ -1,0 +1,42 @@
+.sortbar-wrapper {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-muted);
+  border: 1px solid var(--color-subtle);
+  gap: 0;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+  align-self: flex-start;
+  max-width: 25rem;
+  height: 100%;
+}
+
+.sortbar-fields {
+  padding: 0.125rem 0.5rem;
+  flex: 1 1 auto;
+  cursor: pointer;
+  background-color: var(--color-base);
+  border-top-left-radius: var(--radius-md);
+  border-bottom-left-radius: var(--radius-md);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border: none;
+}
+.sortbar-fields:hover {
+  background-color: var(--color-strong);
+  color: var(--color-text-rev);
+}
+
+.sortbar-fields2 {
+  padding: 0.125rem 0.5rem;
+  flex: 1 1 auto;
+  cursor: pointer;
+  border-radius: 0;
+  border: none;
+}
+.sortbar-fields2:hover {
+  background-color: var(--color-contrast);
+  color: var(--color-text-rev);
+}
