@@ -28,3 +28,9 @@ rustc-ice-*.txt
 
 target/
 static/
+./target
+
+
+# Added by cargo
+
+/target
