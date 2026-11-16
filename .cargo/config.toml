@@ -1,0 +1,4 @@
+[alias]
+test-dev = "test --lib -- --nocapture"
+check-dev = "watch -c -w src -q -x clippy"
+dev = "watch -c -w src -q -x run "
