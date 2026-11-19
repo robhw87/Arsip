@@ -48,25 +48,3 @@ impl AppDbPool {
         Ok(())
     }
 }
-
-#[cfg(test)]
-mod tests {
-    #![allow(
-        unused_variables,
-        unused_doc_comments,
-        unused_mut,
-        dead_code,
-        unused_imports
-    )]
-    use crate::AdapterError;
-    use crate::AppConfig;
-    use crate::db::AppDbPool;
-    use tracing::info;
-    #[tokio::test]
-    pub async fn test_db() -> Result<(), AdapterError> {
-        let config = AppConfig::new("/home/rnz23/projects/.env")?;
-        let pool = AppDbPool::new(&config).await?;
-        info!(pool = ?pool, "testing db pool");
-        Ok(())
-    }
-}

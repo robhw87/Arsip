@@ -1,4 +1,3 @@
-use adapters::error::AdapterError;
 use thiserror::Error;
 
 #[derive(Debug, Error)]

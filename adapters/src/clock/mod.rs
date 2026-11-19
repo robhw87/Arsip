@@ -25,7 +25,7 @@ impl AppClock {
         OffsetDateTime::now_utc().to_offset(self.offset)
     }
 
-    pub fn today_date(&self) -> Date {
+    pub fn curdate(&self) -> Date {
         self.now().date()
     }
 
@@ -43,7 +43,7 @@ impl AppClock {
 
     pub fn date_str(&self, delta: i64) -> String {
         let format = format_description!("[year]-[month]-[day]");
-        let date_stringify = self.today_date() + Duration::days(delta);
+        let date_stringify = self.curdate() + Duration::days(delta);
         date_stringify
             .format(&format)
             .unwrap_or_else(|_| "1970-01-01".to_string())

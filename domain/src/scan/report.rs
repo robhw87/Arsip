@@ -3,9 +3,10 @@ pub struct ScanReport(Vec<ClassifyResult>);
 
 impl ScanReport {
     pub fn new(input: Vec<ClassifyResult>) -> Self {
-        let result = input?;
-        Ok(ScanReport(result))
+        //let result = input?;
+        Self(input)
     }
+    /*
     pub fn summary(&self) -> ScanSummary {  }
     pub fn exit_code(&self) -> ScanExitCode { ... }
 
@@ -20,4 +21,5 @@ impl ScanReport {
 
     /// Valid files only — what `commit` would consider ingesting.
     pub fn valid_files(&self) -> impl Iterator<Item = &ScannedFile> { ... }
+    */
 }
