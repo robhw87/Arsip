@@ -1,0 +1,62 @@
+networks:
+  app-network:
+    driver: bridge
+    name: app-network
+
+services:
+  db:
+    image: postgres:18.4-alpine
+    container_name: db
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_DB=${DB_DBS}
+      - MIGRATOR=${DB_MIGRATOR}
+      - MIGRATOR_PASS=${DB_MIGRATOR_PASS}
+      - APP_USER=${DB_APP_USER}
+      - APP_USER_PASS=${DB_APP_USER_PASS}
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d:z
+      - postgres-data:/var/lib/postgresql
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_DBS}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+
+  redis:
+    image: redis:trixie
+    container_name: redis
+    restart: always
+    environment:
+      - REDIS_APP_PASSWORD=${REDIS_APP_PASS}
+      - REDIS_ADMIN_PASSWORD=${REDIS_ADMIN_PASS}
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./redis/init-acl.sh:/usr/local/bin/init-acl.sh:ro,Z
+      - ./redis/redis.conf:/usr/local/etc/redis/redis.conf:ro,z
+      - redis_data:/data:Z
+    command: ["/bin/sh", "/usr/local/bin/init-acl.sh"]
+    deploy:
+      resources:
+        limits:
+          cpus: "1.5"
+          memory: 1280M # Set slightly higher than maxmemory (1gb) to allow Redis overhead
+    healthcheck:
+      test:
+        ["CMD-SHELL", 'redis-cli -a "$REDIS_ADMIN_PASSWORD" ping | grep PONG']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+    networks:
+      - app-network
+
+volumes:
+  postgres-data:
+  redis_data:
